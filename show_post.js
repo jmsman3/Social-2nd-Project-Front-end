@@ -1,5 +1,5 @@
 
-
+// https://social-onrender-backend-2.onrender.com/
 // part-2
 // Function to fetch and display posts
 async function fetchAndDisplayPosts() {
@@ -8,7 +8,7 @@ async function fetchAndDisplayPosts() {
         console.log("Show the User ID:", userId);
 
         // Fetch posts from the API
-        const response = await fetch('https://social-2nd-project-backend.vercel.app/crud/posts/', {
+        const response = await fetch('https://social-onrender-backend-2.onrender.com/crud/posts/', {
             method: 'GET',
             headers: {
                 'Authorization': `Token ${localStorage.getItem('token')}`  // Include token for authenticated requests
@@ -41,14 +41,11 @@ async function fetchAndDisplayPosts() {
             let postContent = `
                 <div class="flex justify-between items-start mb-4">
                     <div class="flex items-center space-x-3">
-                        <div class="w-10 h-10 rounded-full bg-gray-300">
-                           
-       
+                        <div class="w-10 h-10 rounded-full bg-gray-300">      
                      <img class="post-image-click w-16 h-10 rounded-full object-cover" 
                                             data-user-id="${post.user_id}" 
                                             src="${post.profile_image}" 
                                             alt="Post Image">
-
                         </div>
                         <div>
                             
@@ -193,7 +190,7 @@ async function fetchAndDisplayPosts() {
             deleteButton.addEventListener('click', async () => {
                 const postId = deleteButton.getAttribute('data-post-id');
                 try {
-                    const deleteResponse = await fetch(`https://social-2nd-project-backend.vercel.app/crud/posts/${postId}/`, {
+                    const deleteResponse = await fetch(`https://social-onrender-backend-2.onrender.com/crud/posts/${postId}/`, {
                         method: 'DELETE',
                         headers: {
                             'Authorization': `Token ${localStorage.getItem('token')}`
@@ -428,9 +425,11 @@ fetchAndDisplayPosts();
 document.addEventListener("DOMContentLoaded", function () {
     const token = localStorage.getItem("token");
     const userId = localStorage.getItem("user_id");
+
+    
   
     if (token && userId) {
-      const apiUrl = `https://social-2nd-project-backend.vercel.app/user/user_details/${userId}/`;
+      const apiUrl = `https://social-onrender-backend-2.onrender.com/user/user_details/${userId}/`;
   
       fetch(apiUrl, {
         method: "GET",

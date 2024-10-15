@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
-            const response = await fetch('https://social-2nd-project-backend.vercel.app/crud/posts/', {
+            const response = await fetch('https://social-onrender-backend-2.onrender.com/crud/posts/', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Token ${token}`,

@@ -86,7 +86,7 @@ const handleRegistration = (event) => {
         password
       )
     ) {
-      fetch("https://social-2nd-project-backend.vercel.app/user/register/", {
+      fetch("https://social-onrender-backend-2.onrender.com/user/register/", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(info),
@@ -211,7 +211,7 @@ const handleLogin = (event) => {
   waitButton.style.display = 'inline-block';
 
   if (username && password) {
-      fetch("https://social-2nd-project-backend.vercel.app/user/login/", {
+      fetch("https://social-onrender-backend-2.onrender.com/user/login/", {
           method: "POST",
           headers: { "content-type": "application/json" },
           body: JSON.stringify({ username, password }),
@@ -259,7 +259,7 @@ const handleLogin = (event) => {
 
 const handleLogout = () => {
   const token = localStorage.getItem("token");
-  fetch("https://social-2nd-project-backend.vercel.app/user/logout/", {
+  fetch("https://social-onrender-backend-2.onrender.com/user/logout/", {
     method: "POST",
     headers: {
       Authorization: `Token ${token}`,
