@@ -80,10 +80,11 @@ const handleRegistration = (event) => {
   signUpButton.style.display = "none";
   waitButton.style.display = "inline-block";
 
+  
   if (password === confirm_password) {
     if (
       /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(
-        password
+        password 
       )
     ) {
       fetch("https://social-onrender-backend-2.onrender.com/user/register/", {
